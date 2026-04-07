@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+
+
 export default function MovieCard( {movie} ) {
     return (
         <div className="card" style={ {width: "18rem"} } >
@@ -7,7 +11,7 @@ export default function MovieCard( {movie} ) {
                     <p className="card-text">
                         {movie.abstract}
                     </p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <Link to={`/movies/${movie.id}`} >Dettagli film</ Link>
                 </div>
         </div>
     )

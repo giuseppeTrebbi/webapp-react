@@ -6,8 +6,10 @@ export default function AppLayout() {
     return (
         <>
             <Header />
-            
-            <Outlet />
+
+            <main className="py-5">
+                <Outlet />
+            </main>
         </>
     )
 }
