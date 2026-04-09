@@ -11,7 +11,7 @@ export default function MovieCard( {movie} ) {
                     <p className="card-text">
                         {movie.abstract}
                     </p>
-                    <Link to={`/movies/${movie.id}`} >Dettagli film</ Link>
+                    <Link to={`/movies/${movie.slug}`} >Dettagli film</ Link>
                 </div>
         </div>
     )

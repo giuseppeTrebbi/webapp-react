@@ -6,13 +6,11 @@ import MovieCard from "../components/MovieCard"
 
 export default function MoviesPage() {
     const [movies, setMovies] = useState([])
-    
     useEffect(() => {
         axios.get("http://localhost:3000/api/movies").then(resp => {
             setMovies(resp.data)
         })
     }, [])
-
 
 
     return (
