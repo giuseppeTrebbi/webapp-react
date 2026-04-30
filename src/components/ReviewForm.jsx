@@ -12,7 +12,6 @@ const initialReview = {
 
 export default function ReviewForm({ movieId, updateMovie }) {
     const [reviewData, setReviewData] = useState(initialReview)
-
     function updateReviewData(event) {
         const value = event.target.value
         const key = event.target.name
@@ -21,16 +20,13 @@ export default function ReviewForm({ movieId, updateMovie }) {
             [key]: value
         })
     }
-
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post(`http://localhost:3000/api/movies/${movieId}/reviews`, reviewData).then(resp => {
+        axios.post(`http://localhost:3050/api/movies/${movieId}/reviews`, reviewData).then(resp => {
             updateMovie()
             setReviewData(initialReview)
         })
     }
-
-
 
     return (
         <section style={{ marginTop: "7rem" }} className="container">

@@ -16,7 +16,7 @@ export default function MovieDetailsPage() {
     }, [params.slug])
 
     function getMovieData() {
-        axios.get(`http://localhost:3000/api/movies/${params.slug}`).then(resp => {
+        axios.get(`http://localhost:3050/api/movies/${params.slug}`).then(resp => {
             setMovie(resp.data)
         }).catch(err => {
             if (err.status === 404) {

@@ -7,8 +7,12 @@ export default function Header() {
             path: "/"
         },
         {
-            title: "Movies",
+            title: "film",
             path: "/movies"
+        },
+        {
+            title: "Aggiungi un nuovo film",
+            path: "/movies/create"
         }
     ]
 

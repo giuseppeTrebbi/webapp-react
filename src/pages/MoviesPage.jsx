@@ -10,14 +10,14 @@ export default function MoviesPage() {
 
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/movies").then(resp => {
+        axios.get("http://localhost:3050/api/movies").then(resp => {
             setMovies(resp.data)
         })
     }, [])
     
     function handleSearch(event) {
         event.preventDefault()
-        axios.get("http://localhost:3000/api/movies", { params: { search } }).then(resp => {
+        axios.get("http://localhost:3050/api/movies", { params: { search } }).then(resp => {
             setMovies(resp.data)
         })
     }
